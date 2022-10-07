@@ -1,0 +1,17 @@
+{
+  "name": "todo-fermyon-com",
+  "version": "0.1.0",
+  "author": {
+    "name": "Mikkel Mork Hegnhoj",
+    "email": "mikkel@fermyon.com",
+    "url": "https://fermyon.com"
+  },
+  "description": "The Fermyon todo app - we get higns done!",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "spin": "nodemon --watch frontend --ext html,js,css --verbose --legacy-watch --signal SIGINT --exec 'spin up --file spin.toml'"
+  }
+}

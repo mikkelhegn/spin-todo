@@ -1,0 +1,30 @@
+spin_version = "1"
+authors = ["Mikkel Mørk Hegnhøj <mikkel@fermyon.com>"]
+description = ""
+name = "todo"
+version = "1.0.0"
+trigger = { type = "http", base = "/" }
+
+[[component]]
+id = "todo-api"
+source = "backend/bin/Release/net7.0/todo.wasm"
+[component.build]
+command = "dotnet build backend/Project.csproj -c Release"
+[component.trigger]
+route = "/api"
+
+[[component]]
+source = "modules/spin_static_fs.wasm"
+id = "fileserver"
+files = [ { source = "frontend/", destination = "/" } ]
+[component.trigger]
+route = "/web/..."
+
+# Redirect / to /index
+[[component]]
+id = "redirect-index"
+source = "modules/redirect.wasm"
+environment = { DESTINATION = "/web/index.html" }
+[component.trigger]
+route = "/"
+executor = { type = "wagi" }

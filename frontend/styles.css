@@ -1,0 +1,68 @@
+body {
+    color: #0d203f;
+    font-family: Sen, Europa, Avenir, system, -apple-system, \.SFNSText-Regular, San Francisco, Segoe UI, Helvetica Neue, Lucida Grande, sans-serif;
+    font-size: 16pt;
+}
+
+h1 {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+}
+
+.footer {
+    font-size: 10pt;
+}
+
+.square {
+    height: 50px;
+    width: 200px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.tasklist {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    margin: 10px;
+
+}
+
+.titlecolumn {
+    min-width: 220px;
+    flex: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.column {
+    min-width: 220px;
+    flex: 50%;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.column.hint {
+    background: #00ff33a7;
+}
+
+.column.active {
+    background: #0ce23a;
+}

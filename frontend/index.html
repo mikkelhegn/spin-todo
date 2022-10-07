@@ -1,0 +1,54 @@
+<html>
+    <link rel="icon" type="image/png" href="icon/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+
+<body>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="js.js"></script>
+
+    <h1>A server-side WebAssembly todo-app</h1>
+    
+    <div id="container" class="tasklist">
+        <div id="titles" class="row">
+            <div id="todotitlecol" class="titlecolumn">
+                <div>TODO</div>
+            </div>
+            <div id="donetitlecol" class="titlecolumn">
+                <div>DONE</div>
+            </div>
+        </div>
+        <div id="tasklist" class="row">
+            <div id="todocol" class="column">
+                <div id="importanttodoitem" class="square todoitem" draggable="true" style="background-color: #EF946C;">
+                    Important stuff!!
+                </div>
+                <div id="lessimportanttodoitem" class="square todoitem" draggable="true"
+                    style="background-color: #BEA7E5;">
+                    Less important stuff
+                </div>
+                <div id="bookimportanttodoitem" class="square todoitem" draggable="true"
+                    style="background-color: #34E8BD;">
+                    Read that book
+                </div>
+            </div>
+            <div id="donecol" class="column">
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer">
+        Learn more at <a href="https://fermyon.com">https://www.fermyon.com</a> - where things get done!!!
+        <br><br>
+        Credits to: <a href="https://www.w3schools.com/HTML/tryit.asp?filename=tryhtml5_draganddrop2">https://www.w3schools.com/HTML/tryit.asp?filename=tryhtml5_draganddrop2</a>
+    </div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            drag(document.getElementById("tasklist"));
+        });
+    </script>
+</body>
+</html>
